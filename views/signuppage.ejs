@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="/css/signuppage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="/signupsubmit">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="login">
+            <h2>Signup</h2>
+            <p class="error"></p>
+            <input name="firstName" type="text" placeholder="First Name"><br>
+            <input name="lastName" type="text" placeholder="Last Name"><br>
+            <input name="email" type="email"  placeholder="Enter Email" ><br>
+            <input name="password" type="password" placeholder="Enter password" >
+            <button class="submit" type="submit">SIGNUP</button>
+        </div>
+    </form>
+        <div><p class="a" style="font-weight: 500; padding-left: 60px;">already Signedin? <a href="loginpage">LOGIN</a> now</p></div>
+
+        </div>
+</body>
+</html>

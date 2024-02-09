@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ADD A COURSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9d595d1bf3.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/css/addEvent.css">
+</head>
+
+<body>
+
+  <!-- <section class="header">
+    <nav>
+      <div class="logos">
+        <a href="index.html"><img class="logo-img" src="../images/logo.avif"></a>
+      <label class="logo">PlayEvents</label>
+    </div>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+             <i class="fa fa-regular fa-circle-xmark"></i> -->
+            <!-- <uL>
+                <li><a href="dashBoard" class="navbar-link hover:underline" data-nav-link>HOME</a></li>
+                <li><a href="allCourses" class="navbar-link hover:underline" data-nav-link>ALL EVENTS</a></li>
+                <li><a href="addCourse" class="navbar-link hover:underline" data-nav-link>ADD EVENTS</a></li>
+                <li><a href="#" class="navbar-link hover:underline" data-nav-link>ABOUT</a></li>
+                <li><a href="#" class="navbar-link hover:underline" data-nav-link>FEEDBACK</a></li>
+            </uL>
+        </div> -->
+        <!-- <i class="fa fa-bars"></i> -->
+        <!-- <i class="fa fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section> -->
+      <section class="sectionCourse" aria-label="recent post">
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">
+              Add an <strong class="strong" style="display: inline;">EVENT </strong>
+            </h2>
+          </div>
+          <ul class="grid-list">
+                <form action="/uploadEvent" method="POST">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <input type="text" value="" name="EventImg" placeholder="Event Image URL">
+                    <input type="text" name="EventTitle" value="" placeholder="Title">
+                    <textarea name="content" placeholder="Description you want add here" minlength="10"></textarea>
+                    <input type="text" name="EventLocation" placeholder="Venue">
+                    <input type="text" name="EventMemebers" placeholder="Capacity">
+                    <label for="EventStartDate">StartDate</label>
+                    <input type="date" value="" name="EventStartDate" placeholder="EventStartDate" >
+                    <br>
+                    <label for="EventTime">Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="time" value="" name="EventTime"  placeholder="EventTime">
+                    <br>
+                    <label for="EventEnd">EndDate&nbsp;&nbsp;</label>
+                    <input type="date" value="" name="EventEndDate" >
+                    
+                    <div class="card-content">
+                      <input type="submit" value="ADD EVENT"> 
+                    </div>
+                </form>
+          </ul>
+        </div>
+      </section>
+ 
+      <footer>
+
+      </footer>
+</body>
+
+</html>

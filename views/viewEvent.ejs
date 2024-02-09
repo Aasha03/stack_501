@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="/css/viewEvent.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Event Details</h1>
+
+        <div class="event-details">
+            <div>
+                <h2><%= eventCont.Title %></h2>
+                <!-- Replace 'event-title.jpg' with the actual image source -->
+                <img src="<%= eventCont.eventImg %>" alt="">
+            </div>
+
+            <div>
+                <h2>Description</h2>
+                <p>-<%= eventCont.eventDesc %></p>
+
+                <h2>Venue</h2>
+                <p>-<%= eventCont.eventVenue %></p>
+
+                <h2>Date and Time</h2>
+                <p>Start Date: <%= eventCont.eventStartDate %><br>
+                    End Date: <%= eventCont.eventEndDate %><br>
+                    Time: <%= eventCont.eventTime %></p>
+            </div>
+
+        </div>
+
+        <div class="back-buttons">
+            <a href="/allEvents">Back</a> 
+        </div>
+        <% if(flag === 1) { %>
+       <div class="back-button">
+        <a href="/deleteEvent?eventId=<%= encodeURIComponent(eventCont.id) %>"><button class="add-topic">Delete Event</button></a>
+        </div>
+        <% } %>
+        <% if(flag == 0) { %>
+            <% if(a == 1) { %>
+                <div class="back-button">
+                    <button class="add-topic" disabled>Already Registered</button>
+                </div>
+
+                <div class="back-button">
+                    <a href="/unRegister?eventId=<%= encodeURIComponent(eventCont.id) %>">
+                    <button class="add-topic">UnRegister</button>
+                    </a>
+                </div>
+             <% } 
+            else { %>  
+            <% if(val == 0) { %>
+                <div class="back-button">
+                    <a href="/registerEvent?eventId=<%= encodeURIComponent(eventCont.id) %>">
+                        <button class="add-topic">Register Event</button>
+                    </a>
+                </div>
+            
+            <% } 
+            else { %>
+
+                <div class="back-button">
+                    <button class="add-topic" disabled>Registration closed</button>
+                </div>
+            <% } %>
+            <% } %>
+        <% } %>
+
+        
+    </div>
+
+</body>
+
+</html>

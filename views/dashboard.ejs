@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADMIN MAIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link rel="stylesheet" href="/css/dashBoard.css">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/9d595d1bf3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div>
+      <label class="logo">Sports club</label>
+    </div>
+      <ul>
+        <li class="link"><a class="active anc" href="dashBoard">Home</a></li>
+        <li class="link"><a class="anc" href="allEvents">ALL EVENTS</a></li>
+        <% if(flag === 1) { %>
+            <li class="link"><a class="anc" href="addEvent">ADD EVENT</a></li>
+        <% } %>
+        <% if(flag === 0) { %>
+        <li class="link"><a class="anc" href="myEvents">My Events</a></li>
+        <% } %>
+        <li class="link"><a class="anc" href="#">About</a></li>
+        <li class="profile">
+        <i class="fa-regular fa-user"></i>
+        <p class="proLink"><%= name %></p></li>
+        
+      </ul>
+    </nav>
+    <div class="back">
+      <div class="pp">
+        <p class="s">SPORTS</p>
+        <p class="e">EVENT</p>
+        <P class="y">OF THE YEAR</P>
+      </div>
+      <% if(flag === 0) { %>
+       <a href="allEvents"><button class="button">Participate Now</button></a>
+       <% } %>
+    </div>
+
+    <!-- <h1>Banner Slider</h1> -->
+
+<!-- <div class="banner">
+    <div class="slideshow-container">
+        <div class="allSlides fade">
+            <div class="numbertext">1/3</div>
+            <img src="../images/cricket.jpg" style="width:100%">
+
+            <div class="text">C Language</div>
+        </div>
+        <div class="allSlides fade">
+            <div class="numbertext">2/3</div>
+            <img src="../images/volley.jpg" style="width:100%">
+
+            <div class="text">Python Language</div>
+        </div>
+
+        <div class="allSlides fade">
+            <div class="numbertext">3/3</div>
+            <img src="../images/kabaddi.jpeg" style="width:100%">
+
+            <div class="text"> Fullstack</div>
+        </div>
+        <a class="prev"
+            onclick="changeSlides(-1)"
+        >&lt;</a>
+        <a class="next"
+         onclick="changeSlides(1)"
+        >&gt;</a>
+    </div>
+
+    <div class="dots">
+        <span class="dot"
+            onclick="currentSlide(1)"
+        ></span>
+        <span class="dot"
+            onclick="currentSlide(2)"
+        ></span>
+        <span class="dot"
+            onclick="currentSlide(3)"
+        ></span>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="container">
+    <h1>Sports</h1>
+    <div class="have">
+    <div class="images">
+      <img src="../images/cricket.jpg">
+      <h2>Cricket</h2>
+    </div>
+    <div class="separator"></div>
+    <div class="images">
+      <img src="../images/volley.jpg">
+      <h2>volley</h2>
+    </div>
+    <div class="separator"></div>
+    <div class="images">
+      <img src="../images/kabaddi.jpeg">
+      <h2>kabaddi</h2>
+    </div>
+    </div>
+  </div> -->
+    <!-- <script>
+      let slideIndex = 1;
+      function showSlides(n){
+          let i;
+          let slides = document.getElementsByClassName("allSlides");
+          let dots = document.getElementsByClassName("dot");
+          if(n>slides.length){
+              slideIndex = 1;
+          }
+          if(n<1){
+              slideIndex = slides.length;
+          }
+  
+          for(i = 0; i<slides.length; i++){
+              slides[i].style.display = "none";
+          }
+  
+          for(i = 0; i<dots.length; i++){
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+  
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+      }
+      showSlides(slideIndex);
+  
+      function changeSlides(n){
+          showSlides(slideIndex += n);
+      }
+  
+      function currentSlide(n){
+          showSlides(slideIndex = n);
+      }
+  
+  setInterval(function(){
+      changeSlides(1);
+  },3000) -->
+  <!-- </script> -->
+  </body>
+</html>

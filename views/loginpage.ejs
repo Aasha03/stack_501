@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="/css/loginpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="container left">
+        <form  method="POST" action="/loginsubmit">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="login">
+            <h2>Admin Login</h2>
+            <p class="error"></p>
+            <input name="Username" type="text" placeholder="Enter Name"><br>
+            <input name="email" type="email"  placeholder="Enter Email" ><br>
+            <input  name="password" type="password" placeholder="Enter password">
+            </div>
+        <div>
+            <p><a href="#" >Forgot password?</a></p>
+        </div>
+        <div>
+            <button class="submit" type="submit">LOGIN</button>
+        </div>
+    
+    </form>
+
+    </div>
+    <div class="separator"></div>
+        <div class="container right">
+        <form  method="POST" action="/loginsubmit">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="login">
+            <h2>User Login</h2>
+            <p class="error"></p>
+            <input name="Username" type="text" placeholder="Enter Name"><br>
+            <input name="email" type="email"  placeholder="Enter Email" ><br>
+            <input  name="password" type="password" placeholder="Enter password">
+            </div>
+        <div>
+            <p><a href="#" >Forgot password?</a></p>
+        </div>
+        <div>
+            <button class="submit" type="submit">LOGIN</button>
+        </div>
+        
+        <div><p class="a" style="font-weight: 500; padding-left: 60px;">Not a member? <a href="signuppage">Signup</a> now</p></div>
+    </form>
+    </div>
+</div>
+    
+</body>
+</html>
